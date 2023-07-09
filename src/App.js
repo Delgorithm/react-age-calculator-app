@@ -1,12 +1,10 @@
 import React from 'react';
 import FormAge from './components/formAge';
+import CurrentDate from './components/calculus';
 
 function App() {
     return (
-        <>
-        <h1>Age calc app</h1>
         <FormAge />
-        </>
     );
 }
 
