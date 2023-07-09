@@ -1,5 +1,6 @@
 :root{
   --clr-purple: hsl(259,100%,65%);
+  --clr-light-purple: hsla(259, 100%, 75%, 0.705);
   --clr-light-red:hsl(0,100%,67%);
   --clr-white:hsl(0,0%,100%);
   --clr-off-white:hsl(0,0%,94%);
@@ -7,18 +8,83 @@
   --clr-smokey-grey:hsl(0,1%,44%);
   --clr-off-black:hsl(0,0%,8%);
 }
-
 *{
   font-family: 'Poppins', sans-serif;
   padding: 0;
   margin: 0;
   list-style: none;
-  line-height: 1.5;
   box-sizing: border-box;
 }
-
+body{
+  display: grid;
+  place-content: center;
+  min-height: 100svh;
+  background-color: var(--clr-light-grey);
+}
+.ageApp{
+  background-color: var(--clr-white);
+  padding: 2rem 2rem 2rem 2rem;
+  border-radius: 1vmax 1vmax 12vmax 1vmax;
+}
 .formStyle{
-  background-color: red;
+  display: flex;
+  gap: 30px;
+}
+.numberDay,
+.numberMonth,
+.numberYear{
   display: flex;
   flex-direction: column;
+  gap: 10px;
+}
+input{
+  padding: 0.3em 1em;
+  border-radius: 1vmax;
+  border: 1px solid var(--clr-smokey-grey);
+  font-size: 2em;
+}
+input:focus{
+  outline-color: var(--clr-smokey-grey);
+}
+label{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8em;
+  font-weight: 800;
+  color: var(--clr-smokey-grey);
+}
+/* -------- Bar - button ------ */
+.bar-button{
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  gap: 1rem;
+}
+/* -------- Bar  ------- */
+.bar{
+  height: 1px;
+  width: 450px;
+  background-color: var(--clr-smokey-grey);
+}
+/* -------- Button -------- */
+button{
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background-color: var(--clr-purple);
+  border: none;
+  cursor: pointer;
+}
+button:hover{
+  background-color: var(--clr-light-purple);
+  transition: .4s;
+}
+/* -------- Big display ------- */
+.bigDisplay p{
+  font-size: 4em;
+  font-weight: 800;
+  line-height: -1;
+}
+.bigDisplay span{
+  color: var(--clr-purple);
 }
