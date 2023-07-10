@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
+import CurrentDate from './components/currentDate'
+
 
 function Form() {
     const [day, setDay] = useState('');
     const [month, setMonth] = useState('');
     const [year, setYear] = useState('');
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (day < 1 || day > 31 || month < 1 || month > 12 || year < 1900 || year > 2023) {
-            alert('You need to put real values');
-        }
-
-        console.log(day, month, year);
-    };
+    const ageYear = myYear - year;
+    const ageMonth = myMonth - month;
+    const ageDay = myDay - day;
 
     return (
         <div className='ageApp'>
@@ -63,9 +60,9 @@ function Form() {
             </div>
             {/* ------- Big display ------- */}
             <div className='bigDisplay'>
-                <p className='bigYear'><i><span>{year}</span> years</i></p>
-                <p className='bigMonth'><i><span>{month}</span> months</i></p>
-                <p className='bigDay'><i><span>{day}</span> days</i></p>
+                <p className='bigYear'><i><span>{ageYear}</span> years</i></p>
+                <p className='bigMonth'><i><span>{ageMonth}</span> months</i></p>
+                <p className='bigDay'><i><span>{ageDay}</span> days</i></p>
             </div>
         </div>
     );
