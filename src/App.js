@@ -1,10 +1,13 @@
 import React from 'react';
 import FormAge from './components/formAge';
-import CurrentDate from './components/calculus';
+import CurrentDate from './components/currentDate'
 
 function App() {
     return (
-        <FormAge />
+        <>
+            <FormAge/>
+            <CurrentDate/>
+        </>
     );
 }
 
